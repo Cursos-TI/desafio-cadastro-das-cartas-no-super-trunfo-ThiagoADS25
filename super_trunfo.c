@@ -15,7 +15,7 @@ int main() {
     printf("NOSSA PRIMEIRA ETAPA É MONTAR A PRIMEIRA CARTA DO JOGO!\n"); // Mensagem informativa
     printf("FIQUE ATENTO AOS CAMPOS DE PREENCHIMENTO PARA QUE POSSAMOS\n"); // Mensagem informativa
     printf("PREENCHER CONFORME SOLICITADO EM CADA LINHA.\n"); // Mensagem informativa
-    printf("ENTÃO VAMOS NESSA!!!\n"); // Mensagem informativa
+    printf("ENTÃO, VAMOS NESSA!!!\n"); // Mensagem informativa
     printf("\n"); // Pular linha
     printf("---------------------------------------------------\n"); // Colocando um tracejado entre as informações para separar
     printf("\n"); // Pular linha
