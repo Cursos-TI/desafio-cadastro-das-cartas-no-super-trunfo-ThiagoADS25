@@ -7,7 +7,7 @@ int main() { // Função principal
     float pib1, pib2; // Declara o PIB (Produto Interno Bruto) da cidade 1 e 2
     char nome1[50], nome2[50]; // Declara o mome da Cidade 1 e 2
     char opcao1, opcao2; // Declara a letra correspondente a cidade 1 e 2 de 'A' a 'H'
-    char codigo1[20], codigo2[20]; // Declara o código numerico de 01 a 04 para a cidade 1 e 2
+    char codigo1[2], codigo2[2]; // Declara o código numerico de 01 a 04 para a cidade 1 e 2
     float densidade1, densidade2; // Declara a densidade populacional da cidade 1 e 2
     float pibcapita1, pibcapita2; // Declara o PIB per capita da cidade 1 e 2
 
