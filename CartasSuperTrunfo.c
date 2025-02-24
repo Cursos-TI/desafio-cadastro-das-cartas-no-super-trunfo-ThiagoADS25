@@ -6,7 +6,9 @@
 // Siga os comentários para implementar cada parte do desafio.
 //Teste larissa
 
-int main() {
+int main(){
+    printf("Bem-vindo ao Super Trunfo de Cidades!\n"); // Mensagem de boas-vindas ao jogo.
+
     // Sugestão: Defina variáveis separadas para cada atributo da cidade.
     // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
     
