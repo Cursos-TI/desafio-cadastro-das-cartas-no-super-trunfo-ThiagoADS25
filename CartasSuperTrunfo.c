@@ -42,6 +42,7 @@ int main() { // Função principal
     pibcapita1 = (float)(pib1 / populacao1); // Calculo do PIB per capita da carta 1
     superpoder1 = (float)(area1 + pib1 + populacao1 + pibcapita1 + pontos1 - densidade1); // Calculo do superpoder da carta 1
 
+
     // IMPRESSÃO DA CARTA 1
 
 
@@ -117,12 +118,15 @@ int main() { // Função principal
 
     printf("SUAS INFORMAÇÕES FORAM CADASTRADAS COM SUCESSO!!!\n"); // Mensagem informativa
     printf("OBRIGADO POR PARTICIPAR!!!\n"); // Mensagem informativa
-    printf("SEGUEM AS ABAIXO COMPARAÇÕES DAS CARTAS CADASTRADAS:\n"); // Mensagem informativa
+    printf("SEGUEM ABAIXO AS COMPARAÇÕES DAS CARTAS CADASTRADAS:\n"); // Mensagem informativa
     printf("\n"); // Pular linha
     printf("---------------------------------------------------\n"); // Colocando um tracejado entre as informações para separar
     printf("\n"); // Pular linha
 
+
     // COMPARAÇÃO DAS CARTAS
+
+
     printf("Comparação de Cartas:\n"); // Mensagem informativa
     printf("População: %d\n", populacao1 > populacao2); // Comparação da população da carta 1 com a população da carta 2
     printf("Área: %d\n", area1 > area2); // Comparação da área da carta 1 com a área da carta 2
@@ -137,7 +141,9 @@ int main() { // Função principal
     printf("OBRIGADO POR PARTICIPAR!!!\n"); // Mensagem informativa
     printf("\n"); // Pular linha
 
+
     return 0; // Retorna 0 para o sistema operacional
+
 
     /*
     printf(“%formato1 %formato2”, variável1, variável2);
@@ -148,6 +154,7 @@ int main() { // Função principal
     %c: Imprime um único caractere.
     %s: Imprime uma cadeia (string) de caracteres.
     '\n' é um caractere de nova linha
+
     INFORMAÇÕES SOBRE A MISSÃO SUPER TRUNFO:
     Estado: Uma letra de 'A' a 'H' (representando um dos oito estados). Tipo: char    
     Código da Carta: A letra do estado seguida de um número de 01 a 04 (ex: A01, B03). Tipo: char[]
