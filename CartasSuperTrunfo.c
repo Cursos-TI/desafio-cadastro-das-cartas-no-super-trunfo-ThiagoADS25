@@ -30,7 +30,7 @@ int main() { // Função principal
     scanf("%s", &codigo1); // Lê o código da carta da carta 1
     printf("Digite o nome da cidade da 1ª Carta (Nomes simples. ex.: SALVADOR): "); // Solicita o nome da cidade da carta 1
     scanf("%s", &nome1); // Lê o nome da cidade da carta 1
-    printf("Digite a quatidade de habitantes da cidade da 1ª Carta (Número inteiro): "); // Solicita o número de habitantes da carta 1
+    printf("Digite a quantidade de habitantes da cidade da 1ª Carta (Número inteiro): "); // Solicita o número de habitantes da carta 1
     scanf("%ld", &populacao1); // Lê o número de habitantes da carta 1
     printf("Digite o tamanho da área em km² da cidade da 1ª Carta (Número inteiro): "); // Solicita o tamanho da área da carta 1
     scanf("%f", &area1); // Lê o tamanho da área da carta 1
@@ -81,7 +81,7 @@ int main() { // Função principal
     scanf("%s", &codigo2); // Lê o código da carta da carta 2
     printf("Digite o nome da cidade da 2ª Carta (Nomes simples. ex.: SALVADOR): "); // Solicita o nome da cidade da carta 2
     scanf("%s", &nome2); // Lê o nome da cidade da carta 2
-    printf("Digite a quatidade de habitantes da cidade da 2ª Carta (Número inteiro): "); // Solicita o número de habitantes da carta 2
+    printf("Digite a quantidade de habitantes da cidade da 2ª Carta (Número inteiro): "); // Solicita o número de habitantes da carta 2
     scanf("%ld", &populacao2); // Lê o número de habitantes da carta 2
     printf("Digite o tamanho da área em km² da cidade da 2ª Carta (Número inteiro): "); // Solicita o tamanho da área da carta 2
     scanf("%f", &area2); // Lê o tamanho da área da carta 2
@@ -117,21 +117,17 @@ int main() { // Função principal
 
     printf("SUAS INFORMAÇÕES FORAM CADASTRADAS COM SUCESSO!!!\n"); // Mensagem informativa
     printf("OBRIGADO POR PARTICIPAR!!!\n"); // Mensagem informativa
-    printf("\n"); // Pular linha
     printf("SEGUEM AS ABAIXO COMPARAÇÕES DAS CARTAS CADASTRADAS:\n"); // Mensagem informativa
     printf("\n"); // Pular linha
     printf("---------------------------------------------------\n"); // Colocando um tracejado entre as informações para separar
     printf("\n"); // Pular linha
 
     // COMPARAÇÃO DAS CARTAS
-    printf("COMPARAÇÃO DAS CARTAS:\n"); // Mensagem informativa
-    printf("\n"); // Pular linha
-    printf("---------------------------------------------------\n"); // Colocando um tracejado entre as informações para separar
-    printf("\n"); // Pular linha
+    printf("Comparação de Cartas:\n"); // Mensagem informativa
     printf("População: %d\n", populacao1 > populacao2); // Comparação da população da carta 1 com a população da carta 2
     printf("Área: %d\n", area1 > area2); // Comparação da área da carta 1 com a área da carta 2
     printf("PIB: %d\n", pib1 > pib2); // Comparação do PIB da carta 1 com o PIB da carta 2
-    printf("Pontos Turísticos: %d\n", pontos1 >= pontos2); // Comparação da quantidade de pontos turísticos da carta 1 com a quantidade de pontos turísticos da carta 2
+    printf("Pontos Turísticos: %d\n", pontos1 > pontos2); // Comparação da quantidade de pontos turísticos da carta 1 com a quantidade de pontos turísticos da carta 2
     printf("Densidade Populacional: %d\n", densidade1 < densidade2); // Comparação da densidade populacional da carta 1 com a densidade populacional da carta 2
     printf("PIB per Capita: %d\n", pibcapita1 > pibcapita2); // Comparação do PIB per capita da carta 1 com o PIB per capita da carta 2
     printf("Super Poder: %d\n", superpoder1 > superpoder2); // Comparação do superpoder da carta 1 com o superpoder da carta 2
