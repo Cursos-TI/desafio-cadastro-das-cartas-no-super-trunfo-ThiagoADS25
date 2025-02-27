@@ -31,7 +31,7 @@ int main() { // Função principal
     printf("Digite o nome da cidade da 1ª Carta (Nomes simples. ex.: SALVADOR): "); // Solicita o nome da cidade da carta 1
     scanf("%s", &nome1); // Lê o nome da cidade da carta 1
     printf("Digite a quantidade de habitantes da cidade da 1ª Carta (Número inteiro): "); // Solicita o número de habitantes da carta 1
-    scanf("%ld", &populacao1); // Lê o número de habitantes da carta 1
+    scanf("%d", &populacao1); // Lê o número de habitantes da carta 1
     printf("Digite o tamanho da área em km² da cidade da 1ª Carta (Número inteiro): "); // Solicita o tamanho da área da carta 1
     scanf("%f", &area1); // Lê o tamanho da área da carta 1
     printf("Digite o valor do PIB da cidade da 1ª Carta (Número inteiro): "); // Solicita o valor do PIB da carta 1
@@ -53,7 +53,7 @@ int main() { // Função principal
     printf("Estado: %c\n", opcao1); //Campo para a informação da letra do Estado da carta 1
     printf("Código: %c%s\n", opcao1, codigo1); //Campo para a informação do Códico com a letra do Estado e o número da carta da carta 1
     printf("Nome da cidade: %s\n", nome1); //Campo para a informação do nome da cidade da carta 1 (Nome simple, ex.: FORTALEZA)
-    printf("População: %ld\n", populacao1); //Campo para a informação do número da população da carta 1
+    printf("População: %d\n", populacao1); //Campo para a informação do número da população da carta 1
     printf("Área: %.2f km²\n", area1); //Campo para a informação do tamanho da área da cidade  da carta 1 informada acima em Km²
     printf("PIB: %.2f reais\n", pib1); //Campo para a informação do PIB (Produto Interno Bruto) da carta 1
     printf("Numero de Pontos Turísticos: %d\n", pontos1); //Campo para a informação de quantos pontos turístico existem na cidade  da carta 1(Aproximadamente)
@@ -83,7 +83,7 @@ int main() { // Função principal
     printf("Digite o nome da cidade da 2ª Carta (Nomes simples. ex.: SALVADOR): "); // Solicita o nome da cidade da carta 2
     scanf("%s", &nome2); // Lê o nome da cidade da carta 2
     printf("Digite a quantidade de habitantes da cidade da 2ª Carta (Número inteiro): "); // Solicita o número de habitantes da carta 2
-    scanf("%ld", &populacao2); // Lê o número de habitantes da carta 2
+    scanf("%d", &populacao2); // Lê o número de habitantes da carta 2
     printf("Digite o tamanho da área em km² da cidade da 2ª Carta (Número inteiro): "); // Solicita o tamanho da área da carta 2
     scanf("%f", &area2); // Lê o tamanho da área da carta 2
     printf("Digite o valor do PIB da cidade da 2ª Carta (Número inteiro): "); // Solicita o valor do PIB da carta 2
@@ -105,7 +105,7 @@ int main() { // Função principal
     printf("Estado: %c\n", opcao2); //Campo para a informação da letra do Estado
     printf("Código: %c%s\n", opcao2, codigo2); //Campo para a informação do Códico com a letra do Estado e o número da carta
     printf("Nome da cidade: %s\n", nome2); //Campo para a informação do nome da cidade (Nome simple, ex.: FORTALEZA)
-    printf("População: %ld\n", populacao2); //Campo para a informação do número da população
+    printf("População: %d\n", populacao2); //Campo para a informação do número da população
     printf("Área: %.2f km²\n", area2); //Campo para a informação do tamanho da área da cidade informada acima em Km²
     printf("PIB: %.2f reais\n", pib2); //Campo para a informação do PIB (Produto Interno Bruto)
     printf("Numero de Pontos Turísticos: %d\n", pontos2); //Campo para a informação de quantos pontos turístico existem na cidade (Aproximadamente)
@@ -138,12 +138,28 @@ int main() { // Função principal
     printf("\n"); // Pular linha
     printf("---------------------------------------------------\n"); // Colocando um tracejado entre as informações para separar
     printf("\n"); // Pular linha
+
+    printf("Comparação de cartas (Atributo: PIB):\n"); // Mensagem informativa
+    printf("\n"); // Pular linha
+
+    if (pib1 > pib2) { // Se o PIB da carta 1 for maior que o PIB da carta 2
+        printf("Carta 1 - %s: %.2f\n", nome1, pib1); // Mensagem informativa
+        printf("Carta 2 - %s: %.2f\n", nome2, pib2); // Mensagem informativa
+        printf("Resultado: Carta 1 (%s) VENCEU!.\n", nome1); // Mensagem informativa
+    } else { // Se o PIB da carta 1 for igual ao PIB da carta 2
+        printf("Carta 1 - %s: %f\n", nome1, pib1); // Mensagem informativa
+        printf("Carta 2 - %s: %f\n", nome2, pib2); // Mensagem informativa
+        printf("Resultado: Carta 2 (%s) VENCEU!.\n", nome2); // Mensagem informativa
+
+    }
+
+    printf("\n"); // Pular linha
+    printf("---------------------------------------------------\n"); // Colocando um tracejado entre as informações para separar
+    printf("\n"); // Pular linha
     printf("OBRIGADO POR PARTICIPAR!!!\n"); // Mensagem informativa
     printf("\n"); // Pular linha
 
-    printf
-
-
+    
     return 0; // Retorna 0 para o sistema operacional
 
 
