@@ -132,16 +132,34 @@ int main() { // Função principal
     printf("Área: %d\n", area1 > area2); // Comparação da área da carta 1 com a área da carta 2
     printf("PIB: %d\n", pib1 > pib2); // Comparação do PIB da carta 1 com o PIB da carta 2
     printf("Pontos Turísticos: %d\n", pontos1 > pontos2); // Comparação da quantidade de pontos turísticos da carta 1 com a quantidade de pontos turísticos da carta 2
-    printf("Densidade Populacional: %d\n", densidade1 > densidade2); // Comparação da densidade populacional da carta 1 com a densidade populacional da carta 2
+    printf("Densidade Populacional: %d\n", densidade1 < densidade2); // Comparação da densidade populacional da carta 1 com a densidade populacional da carta 2
     printf("PIB per Capita: %d\n", pibcapita1 > pibcapita2); // Comparação do PIB per capita da carta 1 com o PIB per capita da carta 2
     printf("Super Poder: %d\n", superpoder1 > superpoder2); // Comparação do superpoder da carta 1 com o superpoder da carta 2
+    printf("\n"); // Pular linha
+    printf("---------------------------------------------------\n"); // Colocando um tracejado entre as informações para separar
+    printf("\n"); // Pular linha
+
+    printf("Comparação de cartas (Atributo: PIB):\n"); // Mensagem informativa
+    printf("\n"); // Pular linha
+
+    if (pib1 > pib2) { // Se o PIB da carta 1 for maior que o PIB da carta 2
+        printf("Carta 1: %.2f\n", pib1); // Mensagem informativa
+        printf("Carta 2: %.2f\n", pib2); // Mensagem informativa
+        printf("Resultado: Carta 1 VENCEU!\n"); // Mensagem informativa
+    } else { // Se o PIB da carta 1 for igual ao PIB da carta 2
+        printf("Carta 1: %.2f\n", pib1); // Mensagem informativa
+        printf("Carta 2: %.2f\n", pib2); // Mensagem informativa
+        printf("Resultado: Carta 2 VENCEU!\n"); // Mensagem informativa
+
+    }
+
     printf("\n"); // Pular linha
     printf("---------------------------------------------------\n"); // Colocando um tracejado entre as informações para separar
     printf("\n"); // Pular linha
     printf("OBRIGADO POR PARTICIPAR!!!\n"); // Mensagem informativa
     printf("\n"); // Pular linha
 
-
+    
     return 0; // Retorna 0 para o sistema operacional
 
 
