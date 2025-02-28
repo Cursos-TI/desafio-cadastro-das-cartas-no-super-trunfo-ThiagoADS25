@@ -1,16 +1,23 @@
 #include <stdio.h> // Inclui a biblioteca padrão de entrada e saída
+#include <stdlib.h> // Inclui a biblioteca padrão
+#include <time.h> // Inclui a biblioteca de tempo
+
 int main() { // Função principal
     // Declaração de variáveis da carta 1
     unsigned long int populacao1, populacao2; //Declara o numero de habitantes na cidade 1 e 2
     int pontos1, pontos2; // Declara a quantidade de pontos turísticos na cidade 1 e 2
     float area1, area2; // Declara a área da cidade 1 e 2 em km²
     float pib1, pib2; // Declara o PIB (Produto Interno Bruto) da cidade 1 e 2
-    char nome1[50], nome2[50]; // Declara o mome da Cidade 1 e 2
-    char opcao1, opcao2; // Declara a letra correspondente a cidade 1 e 2 de 'A' a 'H'
-    char codigo1[2], codigo2[2]; // Declara o código numerico de 01 a 04 para a cidade 1 e 2
+    char nome1[50]; // Declara o nome da cidade 1
+    char nome2[50]; // Declara o nome da cidade 2
+    char opcao1; // Declara a opção da cidade 1
+    char opcao2; // Declara a opção da cidade 2
+    char codigo1[2]; // Declara o código da cidade 1
+    char codigo2[2]; // Declara o código da cidade 2
     float densidade1, densidade2; // Declara a densidade populacional da cidade 1 e 2
     float pibcapita1, pibcapita2; // Declara o PIB per capita da cidade 1 e 2
     float superpoder1, superpoder2; // Declara o superpoder da cidade 1 e 2
+    int escolhaJogador; // Declara a escolha do jogador
 
 
     // LEITURA DA CARTA 1
@@ -146,12 +153,175 @@ int main() { // Função principal
         printf("Carta 1: %.2f\n", pib1); // Mensagem informativa
         printf("Carta 2: %.2f\n", pib2); // Mensagem informativa
         printf("Resultado: Carta 1 VENCEU!\n"); // Mensagem informativa
-    } else { // Se o PIB da carta 1 for igual ao PIB da carta 2
+    } else if (pib1 < pib2) { // Se o PIB da carta 1 for menor que o PIB da carta 2
         printf("Carta 1: %.2f\n", pib1); // Mensagem informativa
         printf("Carta 2: %.2f\n", pib2); // Mensagem informativa
         printf("Resultado: Carta 2 VENCEU!\n"); // Mensagem informativa
+    } else {
+        printf("Carta 1: %.2f\n", pib1); // Mensagem informativa
+        printf("Carta 2: %.2f\n", pib2); // Mensagem informativa
+        printf("Resultado: As cidade tem o mesmo PIB\n"); // Mensagem informativa
 
     }
+    printf("\n"); // Pular linha
+    printf("---------------------------------------------------\n"); // Colocando um tracejado entre as informações para separar
+    printf("\n"); // Pular linha
+
+    printf("Escolha abaixo um item da carta para comparar: \n"); // Exibe o título do jogo
+    printf("1. População\n"); // Exibe a opção 1
+    printf("2. Área\n"); // Exibe a opção 2
+    printf("3. PIB\n"); // Exibe a opção 3
+    printf("4. Pontos Turísticos\n"); // Exibe a opção 4
+    printf("5. Densidade Populacional\n"); // Exibe a opção 5
+    printf("6. PIB per Capita\n"); // Exibe a opção 6
+    printf("7. Super Poder\n"); // Exibe a opção 7
+    printf("\n"); // Pular linha
+    printf("Digite a sua escolha (1 a 7): "); // Solicita ao jogador que escolha uma opção
+    scanf("%d", &escolhaJogador); // Lê a escolha do jogador
+    printf("\n"); // Pular linha
+    
+
+
+    switch (escolhaJogador) { // Verifica a escolha do jogador
+        case 1: // Se o jogador escolher População
+          printf("Você escolheu População.\n"); // Exibe a escolha do jogador
+          if (populacao1 > populacao2) {
+            printf("Cidade: %s\n", nome1);
+            printf("Atributo Comparado: %d\n", escolhaJogador);
+            printf("Carta 1 - %d | Carta 2 - %d\n", populacao1, populacao2);
+            printf("*** Carta 1 Venceu! ***\n");
+        } else if (populacao1 < populacao2) {
+            printf("Cidade: %s\n", nome2);
+            printf("Atributo Comparado: %d\n", escolhaJogador);
+            printf("Carta 1 - %d | Carta 2 - %d\n", populacao1, populacao2);
+            printf("*** Carta 2 Venceu! ***\n");
+        } else {
+            printf("Cidade: %s e Cidade: %s\n", nome1, nome2);
+            printf("Atributo Comparado: %d\n", escolhaJogador);
+            printf("Carta 1 - %d | Carta 2 - %d\n", populacao1, populacao2);
+            printf("*** Houve um Empate! ***\n");
+        } break; // Sai do switch
+
+        case 2: // Se o jogador escolher Área
+          printf("Você escolheu Área.\n"); // Exibe a escolha do jogador
+          if (area1 > area2) {
+            printf("Cidade: %s\n", nome1);
+            printf("Atributo Comparado: %d\n", escolhaJogador);
+            printf("Carta 1 - %.2f | Carta 2 - %.2f\n", area1, area2);
+            printf("*** Carta 1 Venceu! ***\n");
+        } else if (area1 < area2) {
+            printf("Cidade: %s\n", nome2);
+            printf("Atributo Comparado: %d\n", escolhaJogador);
+            printf("Carta 1 - %.2f | Carta 2 - %.2f\n", area1, area2);
+            printf("*** Carta 2 Venceu! ***\n");
+        } else {
+            printf("Cidade: %s e Cidade: %s\n", nome1, nome2);
+            printf("Atributo Comparado: %d\n", escolhaJogador);
+            printf("Carta 1 - %.2f | Carta 2 - %.2f\n", area1, area2);
+            printf("*** Houve um Empate! ***\n");
+        } break; // Sai do switch
+
+        case 3: // Se o jogador escolher PIB
+          printf("Você escolheu PIB.\n"); // Exibe a escolha do jogador
+          if (pib1 > pib2) {
+            printf("Cidade: %s\n", nome1);
+            printf("Atributo Comparado: %d\n", escolhaJogador);
+            printf("Carta 1 - %.2f | Carta 2 - %.2f\n", pib1, pib2);
+            printf("*** Carta 1 Venceu! ***\n");
+        } else if (pib1 < pib2) {
+            printf("Cidade: %s\n", nome2);
+            printf("Atributo Comparado: %d\n", escolhaJogador);
+            printf("Carta 1 - %.2f | Carta 2 - %.2f\n", pib1, pib2);
+            printf("*** Carta 2 Venceu! ***\n");
+        } else {
+            printf("Cidade: %s e Cidade: %s\n", nome1, nome2);
+            printf("Atributo Comparado: %d\n", escolhaJogador);
+            printf("Carta 1 - %.2f | Carta 2 - %.2f\n", pib1, pib2);
+            printf("*** Houve um Empate! ***\n");
+        } break; // Sai do switch
+
+        case 4: // Se o jogador escolher Pontos Turísticos
+          printf("Você escolheu Pontos Turísticos.\n"); // Exibe a escolha do jogador
+          if (pontos1 > pontos2) {
+            printf("Cidade: %s\n", nome1);
+            printf("Atributo Comparado: %d\n", escolhaJogador);
+            printf("Carta 1 - %d | Carta 2 - %d\n", pontos1, pontos2);
+            printf("*** Carta 1 Venceu! ***\n");
+        } else if (pontos1 < pontos2) {
+            printf("Cidade: %s\n", nome2);
+            printf("Atributo Comparado: %d\n", escolhaJogador);
+            printf("Carta 1 - %d | Carta 2 - %d\n", pontos1, pontos2);
+            printf("*** Carta 2 Venceu! ***\n");
+        } else {
+            printf("Cidade: %s e Cidade: %s\n", nome1, nome2);
+            printf("Atributo Comparado: %d\n", escolhaJogador);
+            printf("Carta 1 - %d | Carta 2 - %d\n", pontos1, pontos2);
+            printf("*** Houve um Empate! ***\n");
+        } break; // Sai do switch
+
+        case 5: // Se o jogador escolher Densidade Populacional
+          printf("Você escolheu Densidade Populacional.\n"); // Exibe a escolha do jogador
+          if (densidade1 < densidade2) {
+            printf("Cidade: %s\n", nome1);
+            printf("Atributo Comparado: %d\n", escolhaJogador);
+            printf("Carta 1 - %.2f | Carta 2 - %.2f\n", densidade1, densidade2);
+            printf("*** Carta 1 Venceu! ***\n");
+        } else if (densidade1 > densidade2) {
+            printf("Cidade: %s\n", nome2);
+            printf("Atributo Comparado: %d\n", escolhaJogador);
+            printf("Carta 1 - %.2f | Carta 2 - %.2f\n", densidade1, densidade2);
+            printf("*** Carta 2 Venceu! ***\n");
+        } else {
+            printf("Cidade: %s e Cidade: %s\n", nome1, nome2);
+            printf("Atributo Comparado: %d\n", escolhaJogador);
+            printf("Carta 1 - %.2f | Carta 2 - %.2f\n", densidade1, densidade2);
+            printf("*** Houve um Empate! ***\n");
+        } break; // Sai do switch
+
+        case 6: // Se o jogador escolher PIB per Capita
+          printf("Você escolheu PIB per Capita.\n"); // Exibe a escolha do jogador
+          if (pibcapita1 > pibcapita2) {
+            printf("Cidade: %s\n", nome1);
+            printf("Atributo Comparado: %d\n", escolhaJogador);
+            printf("Carta 1 - %.2f | Carta 2 - %.2f\n", pibcapita1, pibcapita2);
+            printf("*** Carta 1 Venceu! ***\n");
+        } else if (pibcapita1 < pibcapita2) {
+            printf("Cidade: %s\n", nome2);
+            printf("Atributo Comparado: %d\n", escolhaJogador);
+            printf("Carta 1 - %.2f | Carta 2 - %.2f\n", pibcapita1, pibcapita2);
+            printf("*** Carta 2 Venceu! ***\n");
+        } else {
+            printf("Cidade: %s e Cidade: %s\n", nome1, nome2);
+            printf("Atributo Comparado: %d\n", escolhaJogador);
+            printf("Carta 1 - %.2f | Carta 2 - %.2f\n", pibcapita1, pibcapita2);
+            printf("*** Houve um Empate! ***\n");
+        } break; // Sai do switch
+
+        case 7: // Se o jogador escolher Super Poder
+          printf("Você escolheu Super Poder.\n"); // Exibe a escolha do jogador
+          if (superpoder1 > superpoder2) {
+            printf("Cidade: %s\n", nome1);
+            printf("Atributo Comparado: %d\n", escolhaJogador);
+            printf("Carta 1 - %.2f | Carta 2 - %.2f\n", superpoder1, superpoder2);
+            printf("*** Carta 1 Venceu! ***\n");
+        } else if (superpoder1 < superpoder2) {
+            printf("Cidade: %s\n", nome2);
+            printf("Atributo Comparado: %d\n", escolhaJogador);
+            printf("Carta 1 - %.2f | Carta 2 - %.2f\n", superpoder1, superpoder2);
+            printf("*** Carta 2 Venceu! ***\n");
+        } else {
+            printf("Cidade: %s e Cidade: %s\n", nome1, nome2);
+            printf("Atributo Comparado: %d\n", escolhaJogador);
+            printf("Carta 1 - %.2f | Carta 2 - %.2f\n", superpoder1, superpoder2);
+            printf("*** Houve um Empate! ***\n");
+        } break; // Sai do switch
+
+        default: // Se o jogador escolher uma opção inválida
+          printf("Opção inválida. Tente novamente.\n"); // Exibe a mensagem de opção inválida
+          printf("\n"); // Pula uma linha
+          return 0; // Retorna 0 para indicar que o programa foi executado com sucesso
+          printf("\n"); // Pula uma linha
+      } // Fim do switch
 
     printf("\n"); // Pular linha
     printf("---------------------------------------------------\n"); // Colocando um tracejado entre as informações para separar
@@ -159,7 +329,6 @@ int main() { // Função principal
     printf("OBRIGADO POR PARTICIPAR!!!\n"); // Mensagem informativa
     printf("\n"); // Pular linha
 
-    
     return 0; // Retorna 0 para o sistema operacional
 
 

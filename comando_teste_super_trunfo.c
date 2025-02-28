@@ -246,7 +246,7 @@ int main() {
 }
 
 */
-
+ /*
 #include <stdio.h> // Inclui a biblioteca padrão de entrada e saída
 #include <stdlib.h> // Inclui a biblioteca padrão
 #include <time.h> // Inclui a biblioteca de tempo
@@ -289,3 +289,77 @@ int main() { // Função principal
 
   return 0; // Retorna 0 para indicar que o programa foi executado com sucesso
 }
+
+*/
+/*
+
+// Regra 1: Pedra > Tesoura, Tesoura > Papel, Papel > Pedra => VITÓRIA
+// Regra 2: Pedra = Pedra, Tesoura = Tesoura, Papel = Papel => EMPATE
+
+#include <stdio.h> // Inclui a biblioteca padrão de entrada e saída
+#include <stdlib.h> // Inclui a biblioteca padrão
+#include <time.h> // Inclui a biblioteca de tempo
+
+int main() {
+
+  int escolhaJogador, escolhaComputador; // Declara as variáveis escolhaJogador e escolhaComputador
+  srand(time(0)); // Inicializa o gerador de números aleatórios
+  escolhaComputador = rand() % 3 + 1; // Gera um número aleatório entre 1 e 3 para a escolha do computador
+
+  printf("Jogo Pedra, Papel e Tesoura\n"); // Exibe o título do jogo
+  printf("Escolha uma opção:\n"); // Exibe as opções disponíveis
+  printf("1. Pedra\n"); // Exibe a opção 1
+  printf("2. Papel\n"); // Exibe a opção 2
+  printf("3. Tesoura\n"); // Exibe a opção 3
+  printf("Digite a sua escolha: "); // Solicita ao jogador que escolha uma opção
+  scanf("%d", &escolhaJogador); // Lê a escolha do jogador
+
+  switch (escolhaJogador) { // Verifica a escolha do jogador
+    case 1: // Se o jogador escolher Pedra
+      printf("Você escolheu Pedra.\n"); // Exibe a escolha do jogador
+      printf("\n"); // Pula uma linha
+      break; // Sai do switch
+    case 2: // Se o jogador escolher Papel
+      printf("Você escolheu Papel.\n"); // Exibe a escolha do jogador
+      printf("\n"); // Pula uma linha
+      break; // Sai do switch
+    case 3: // Se o jogador escolher Tesoura
+      printf("Você escolheu Tesoura.\n"); // Exibe a escolha do jogador
+      printf("\n"); // Pula uma linha
+      break; // Sai do switch
+    default: // Se o jogador escolher uma opção inválida
+      printf("Opção inválida. Tente novamente.\n"); // Exibe a mensagem de opção inválida
+      printf("\n"); // Pula uma linha
+      return 0; // Retorna 0 para indicar que o programa foi executado com sucesso
+      printf("\n"); // Pula uma linha
+  } // Fim do switch
+
+  switch (escolhaComputador) { // Verifica a escolha do computador
+    case 1: // Se o computador escolher Pedra
+      printf("O computador escolheu Pedra.\n"); // Exibe a escolha do computador
+      printf("\n"); // Pula uma linha
+      break; // Sai do switch
+    case 2: // Se o computador escolher Papel
+      printf("O computador escolheu Papel.\n"); // Exibe a escolha do computador
+      printf("\n"); // Pula uma linha
+      break; // Sai do switch
+    case 3: // Se o computador escolher Tesoura
+      printf("O computador escolheu Tesoura.\n"); // Exibe a escolha do computador
+      printf("\n"); // Pula uma linha
+      break; // Sai do switch
+      printf("\n"); // Pula uma linha
+  } // Fim do switch
+
+  if (escolhaJogador == escolhaComputador) { // Se a escolha do jogador for igual à escolha do computador
+    printf("### Jogo Empatou! ###\n"); // Exibe a mensagem de empate
+    printf("\n"); // Pula uma linha
+  } else if ((escolhaJogador == 1 && escolhaComputador == 3) || (escolhaJogador == 2 && escolhaComputador == 1) || (escolhaJogador == 3 && escolhaComputador == 2)) { // Se o jogador vencer
+    printf("### Você venceu! ###\n"); // Exibe a mensagem de vitória
+    printf("\n"); // Pula uma linha
+  } else { // Se o computador vencer
+    printf("### Você perdeu! ###\n"); // Exibe a mensagem de derrota
+    printf("\n"); // Pula uma linha
+  }
+
+}
+*/
