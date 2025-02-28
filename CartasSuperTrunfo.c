@@ -138,7 +138,7 @@ int main() { // Função principal
     printf("População: %d\n", populacao1 > populacao2); // Comparação da população da carta 1 com a população da carta 2
     printf("Área: %d\n", area1 > area2); // Comparação da área da carta 1 com a área da carta 2
     printf("PIB: %d\n", pib1 > pib2); // Comparação do PIB da carta 1 com o PIB da carta 2
-    printf("Pontos Turísticos: %d\n", pontos1 > pontos2); // Comparação da quantidade de pontos turísticos da carta 1 com a quantidade de pontos turísticos da carta 2
+    printf("Pontos Turisticos: %d\n", pontos1 > pontos2);
     printf("Densidade Populacional: %d\n", densidade1 < densidade2); // Comparação da densidade populacional da carta 1 com a densidade populacional da carta 2
     printf("PIB per Capita: %d\n", pibcapita1 > pibcapita2); // Comparação do PIB per capita da carta 1 com o PIB per capita da carta 2
     printf("Super Poder: %d\n", superpoder1 > superpoder2); // Comparação do superpoder da carta 1 com o superpoder da carta 2
@@ -167,6 +167,8 @@ int main() { // Função principal
     printf("---------------------------------------------------\n"); // Colocando um tracejado entre as informações para separar
     printf("\n"); // Pular linha
 
+    printf("Menu Interativo - Super Trunfo\n"); // Exibe o título do jogo
+    printf("\n"); // Pular linha
     printf("Escolha abaixo um item da carta para comparar: \n"); // Exibe o título do jogo
     printf("1. População\n"); // Exibe a opção 1
     printf("2. Área\n"); // Exibe a opção 2
@@ -185,135 +187,138 @@ int main() { // Função principal
     switch (escolhaJogador) { // Verifica a escolha do jogador
         case 1: // Se o jogador escolher População
           printf("Você escolheu População.\n"); // Exibe a escolha do jogador
-          if (populacao1 > populacao2) {
-            printf("Cidade: %s\n", nome1);
-            printf("Atributo Comparado: %d\n", escolhaJogador);
-            printf("Carta 1 - %d | Carta 2 - %d\n", populacao1, populacao2);
-            printf("*** Carta 1 Venceu! ***\n");
-        } else if (populacao1 < populacao2) {
-            printf("Cidade: %s\n", nome2);
-            printf("Atributo Comparado: %d\n", escolhaJogador);
-            printf("Carta 1 - %d | Carta 2 - %d\n", populacao1, populacao2);
-            printf("*** Carta 2 Venceu! ***\n");
-        } else {
-            printf("Cidade: %s e Cidade: %s\n", nome1, nome2);
-            printf("Atributo Comparado: %d\n", escolhaJogador);
-            printf("Carta 1 - %d | Carta 2 - %d\n", populacao1, populacao2);
-            printf("*** Houve um Empate! ***\n");
-        } break; // Sai do switch
+          if (populacao1 > populacao2) { // Se a população da carta 1 for maior que a população da carta 2
+            printf("Cidade: %s\n", nome1); // Exibe o nome da cidade 1
+            printf("Atributo Comparado: %d\n", escolhaJogador); // Exibe o atributo comparado
+            printf("Carta 1 - %d | Carta 2 - %d\n", populacao1, populacao2); // Exibe a população da carta 1 e da carta 2
+            printf("*** Carta 1 Venceu! ***\n"); // Exibe a mensagem de vitória da carta 1
+        } else if (populacao1 < populacao2) { // Se a população da carta 1 for menor que a população da carta 2
+            printf("Cidade: %s\n", nome2); // Exibe o nome da cidade 2
+            printf("Atributo Comparado: %d\n", escolhaJogador); // Exibe o atributo comparado
+            printf("Carta 1 - %d | Carta 2 - %d\n", populacao1, populacao2); // Exibe a população da carta 1 e da carta 2
+            printf("*** Carta 2 Venceu! ***\n"); // Exibe a mensagem de vitória da carta 2
+        } else { // Se a população da carta 1 for igual à população da carta 2
+            printf("Cidade: %s e Cidade: %s\n", nome1, nome2); // Exibe o nome da cidade 1 e da cidade 2
+            printf("Atributo Comparado: %d\n", escolhaJogador); // Exibe o atributo comparado
+            printf("Carta 1 - %d | Carta 2 - %d\n", populacao1, populacao2); // Exibe a população da carta 1 e da carta 2
+            printf("*** Houve um Empate! ***\n"); // Exibe a mensagem de empate
+        } break; // Sai do switch // Sai do switch
 
-        case 2: // Se o jogador escolher Área
+        case 2: // Se o jogador escolher Área // Se o jogador escolher Área
           printf("Você escolheu Área.\n"); // Exibe a escolha do jogador
-          if (area1 > area2) {
-            printf("Cidade: %s\n", nome1);
-            printf("Atributo Comparado: %d\n", escolhaJogador);
-            printf("Carta 1 - %.2f | Carta 2 - %.2f\n", area1, area2);
-            printf("*** Carta 1 Venceu! ***\n");
-        } else if (area1 < area2) {
-            printf("Cidade: %s\n", nome2);
-            printf("Atributo Comparado: %d\n", escolhaJogador);
-            printf("Carta 1 - %.2f | Carta 2 - %.2f\n", area1, area2);
-            printf("*** Carta 2 Venceu! ***\n");
-        } else {
-            printf("Cidade: %s e Cidade: %s\n", nome1, nome2);
-            printf("Atributo Comparado: %d\n", escolhaJogador);
-            printf("Carta 1 - %.2f | Carta 2 - %.2f\n", area1, area2);
-            printf("*** Houve um Empate! ***\n");
+          if (area1 > area2) { // Se a área da carta 1 for maior que a área da carta 2
+            printf("Cidade: %s\n", nome1); // Exibe o nome da cidade 1
+            printf("Atributo Comparado: %d\n", escolhaJogador); // Exibe o atributo comparado
+            printf("Carta 1 - %.2f | Carta 2 - %.2f\n", area1, area2); // Exibe a área da carta 1 e da carta 2
+            printf("*** Carta 1 Venceu! ***\n"); // Exibe a mensagem de vitória da carta 1
+        } else if (area1 < area2) { // Se a área da carta 1 for menor que a área da carta 2
+            printf("Cidade: %s\n", nome2); // Exibe o nome da cidade 2
+            printf("Atributo Comparado: %d\n", escolhaJogador); // Exibe o atributo comparado
+            printf("Carta 1 - %.2f | Carta 2 - %.2f\n", area1, area2); // Exibe a área da carta 1 e da carta 2
+            printf("*** Carta 2 Venceu! ***\n"); // Exibe a mensagem de vitória da carta 2
+        } else { // Se a área da carta 1 for igual à área da carta 2
+            printf("Cidade: %s e Cidade: %s\n", nome1, nome2); // Exibe o nome da cidade 1 e da cidade 2
+            printf("Atributo Comparado: %d\n", escolhaJogador); // Exibe o atributo comparado
+            printf("Carta 1 - %.2f | Carta 2 - %.2f\n", area1, area2); // Exibe a área da carta 1 e da carta 2
+            printf("*** Houve um Empate! ***\n"); // Exibe a mensagem de empate
         } break; // Sai do switch
 
         case 3: // Se o jogador escolher PIB
           printf("Você escolheu PIB.\n"); // Exibe a escolha do jogador
-          if (pib1 > pib2) {
-            printf("Cidade: %s\n", nome1);
-            printf("Atributo Comparado: %d\n", escolhaJogador);
-            printf("Carta 1 - %.2f | Carta 2 - %.2f\n", pib1, pib2);
-            printf("*** Carta 1 Venceu! ***\n");
-        } else if (pib1 < pib2) {
-            printf("Cidade: %s\n", nome2);
-            printf("Atributo Comparado: %d\n", escolhaJogador);
-            printf("Carta 1 - %.2f | Carta 2 - %.2f\n", pib1, pib2);
-            printf("*** Carta 2 Venceu! ***\n");
-        } else {
-            printf("Cidade: %s e Cidade: %s\n", nome1, nome2);
-            printf("Atributo Comparado: %d\n", escolhaJogador);
-            printf("Carta 1 - %.2f | Carta 2 - %.2f\n", pib1, pib2);
-            printf("*** Houve um Empate! ***\n");
+          if (pib1 > pib2) { // Se o PIB da carta 1 for maior que o PIB da carta 2
+            printf("Cidade: %s\n", nome1); // Exibe o nome da cidade 1
+            printf("Atributo Comparado: %d\n", escolhaJogador); // Exibe o atributo comparado
+            printf("Carta 1 - %.2f | Carta 2 - %.2f\n", pib1, pib2); // Exibe o PIB da carta 1 e da carta 2
+            printf("*** Carta 1 Venceu! ***\n"); // Exibe a mensagem de vitória da carta 1
+        } else if (pib1 < pib2) { // Se o PIB da carta 1 for menor que o PIB da carta 2
+            printf("Cidade: %s\n", nome2); // Exibe o nome da cidade 2
+            printf("Atributo Comparado: %d\n", escolhaJogador); // Exibe o atributo comparado
+            printf("Carta 1 - %.2f | Carta 2 - %.2f\n", pib1, pib2); // Exibe o PIB da carta 1 e da carta 2
+            printf("*** Carta 2 Venceu! ***\n"); // Exibe a mensagem de vitória da carta 2
+        } else {    // Se o PIB da carta 1 for igual ao PIB da carta 2
+            printf("Cidade: %s e Cidade: %s\n", nome1, nome2); // Exibe o nome da cidade 1 e da cidade 2
+            printf("Atributo Comparado: %d\n", escolhaJogador); // Exibe o atributo comparado
+            printf("Carta 1 - %.2f | Carta 2 - %.2f\n", pib1, pib2); // Exibe o PIB da carta 1 e da carta 2
+            printf("*** Houve um Empate! ***\n"); // Exibe a mensagem de empate
         } break; // Sai do switch
 
         case 4: // Se o jogador escolher Pontos Turísticos
           printf("Você escolheu Pontos Turísticos.\n"); // Exibe a escolha do jogador
-          if (pontos1 > pontos2) {
-            printf("Cidade: %s\n", nome1);
-            printf("Atributo Comparado: %d\n", escolhaJogador);
-            printf("Carta 1 - %d | Carta 2 - %d\n", pontos1, pontos2);
-            printf("*** Carta 1 Venceu! ***\n");
-        } else if (pontos1 < pontos2) {
-            printf("Cidade: %s\n", nome2);
-            printf("Atributo Comparado: %d\n", escolhaJogador);
-            printf("Carta 1 - %d | Carta 2 - %d\n", pontos1, pontos2);
-            printf("*** Carta 2 Venceu! ***\n");
-        } else {
-            printf("Cidade: %s e Cidade: %s\n", nome1, nome2);
-            printf("Atributo Comparado: %d\n", escolhaJogador);
-            printf("Carta 1 - %d | Carta 2 - %d\n", pontos1, pontos2);
-            printf("*** Houve um Empate! ***\n");
+          if (pontos1 > pontos2) { // Se a quantidade de pontos turísticos da carta 1 for maior que a quantidade de pontos turísticos da carta 2
+            printf("Cidade: %s\n", nome1); // Exibe o nome da cidade 1
+            printf("Atributo Comparado: %d\n", escolhaJogador); // Exibe o atributo comparado
+            printf("Carta 1 - %d\n", pontos1); // Exibe a quantidade de pontos turísticos da carta 1
+            printf("Carta 2 - %d\n", pontos2); // Exibe a quantidade de pontos turísticos da carta 2
+            printf("*** Carta 1 Venceu! ***\n"); // Exibe a mensagem de vitória da carta 1
+        } else if (pontos1 < pontos2) { // Se a quantidade de pontos turísticos da carta 1 for menor que a quantidade de pontos turísticos da carta 2
+            printf("Cidade: %s\n", nome2); // Exibe o nome da cidade 2
+            printf("Atributo Comparado: %d\n", escolhaJogador); // Exibe o atributo comparado
+            printf("Carta 1 - %d\n", pontos1); // Exibe a quantidade de pontos turísticos da carta 1
+            printf("Carta 2 - %d\n", pontos2); // Exibe a quantidade de pontos turísticos da carta 2
+            printf("*** Carta 2 Venceu! ***\n"); // Exibe a mensagem de vitória da carta 2
+        } else { // Se a quantidade de pontos turísticos da carta 1 for igual à quantidade de pontos turísticos da carta 2
+            printf("Cidade: %s e Cidade: %s\n", nome1, nome2); // Exibe o nome da cidade 1 e da cidade 2
+            printf("Atributo Comparado: %d\n", escolhaJogador); // Exibe o atributo comparado
+            printf("Carta 1 - %d\n", pontos1); // Exibe a quantidade de pontos turísticos da carta 1
+            printf("Carta 2 - %d\n", pontos2); // Exibe a quantidade de pontos turísticos da carta 2
+            printf("*** Houve um Empate! ***\n"); // Exibe a mensagem de empate
         } break; // Sai do switch
 
         case 5: // Se o jogador escolher Densidade Populacional
           printf("Você escolheu Densidade Populacional.\n"); // Exibe a escolha do jogador
-          if (densidade1 < densidade2) {
-            printf("Cidade: %s\n", nome1);
-            printf("Atributo Comparado: %d\n", escolhaJogador);
-            printf("Carta 1 - %.2f | Carta 2 - %.2f\n", densidade1, densidade2);
-            printf("*** Carta 1 Venceu! ***\n");
-        } else if (densidade1 > densidade2) {
-            printf("Cidade: %s\n", nome2);
-            printf("Atributo Comparado: %d\n", escolhaJogador);
-            printf("Carta 1 - %.2f | Carta 2 - %.2f\n", densidade1, densidade2);
-            printf("*** Carta 2 Venceu! ***\n");
-        } else {
-            printf("Cidade: %s e Cidade: %s\n", nome1, nome2);
-            printf("Atributo Comparado: %d\n", escolhaJogador);
-            printf("Carta 1 - %.2f | Carta 2 - %.2f\n", densidade1, densidade2);
-            printf("*** Houve um Empate! ***\n");
+          if (densidade1 < densidade2) { // Se a densidade populacional da carta 1 for menor que a densidade populacional da carta 2
+            printf("Cidade: %s\n", nome1); // Exibe o nome da cidade 1
+            printf("Atributo Comparado: %d\n", escolhaJogador); // Exibe o atributo comparado
+            printf("Carta 1 - %.2f | Carta 2 - %.2f\n", densidade1, densidade2); // Exibe a densidade populacional da carta 1 e da carta 2
+            printf("*** Carta 1 Venceu! ***\n"); // Exibe a mensagem de vitória da carta 1
+        } else if (densidade1 > densidade2) { // Se a densidade populacional da carta 1 for maior que a densidade populacional da carta 2
+            printf("Cidade: %s\n", nome2); // Exibe o nome da cidade 2
+            printf("Atributo Comparado: %d\n", escolhaJogador); // Exibe o atributo comparado
+            printf("Carta 1 - %.2f | Carta 2 - %.2f\n", densidade1, densidade2); // Exibe a densidade populacional da carta 1 e da carta 2
+            printf("*** Carta 2 Venceu! ***\n"); // Exibe a mensagem de vitória da carta 2
+        } else { // Se a densidade populacional da carta 1 for igual à densidade populacional da carta 2
+            printf("Cidade: %s e Cidade: %s\n", nome1, nome2); // Exibe o nome da cidade 1 e da cidade 2
+            printf("Atributo Comparado: %d\n", escolhaJogador); // Exibe o atributo comparado
+            printf("Carta 1 - %.2f | Carta 2 - %.2f\n", densidade1, densidade2); // Exibe a densidade populacional da carta 1 e da carta 2
+            printf("*** Houve um Empate! ***\n"); // Exibe a mensagem de empate
         } break; // Sai do switch
 
         case 6: // Se o jogador escolher PIB per Capita
           printf("Você escolheu PIB per Capita.\n"); // Exibe a escolha do jogador
-          if (pibcapita1 > pibcapita2) {
-            printf("Cidade: %s\n", nome1);
-            printf("Atributo Comparado: %d\n", escolhaJogador);
-            printf("Carta 1 - %.2f | Carta 2 - %.2f\n", pibcapita1, pibcapita2);
-            printf("*** Carta 1 Venceu! ***\n");
-        } else if (pibcapita1 < pibcapita2) {
-            printf("Cidade: %s\n", nome2);
-            printf("Atributo Comparado: %d\n", escolhaJogador);
-            printf("Carta 1 - %.2f | Carta 2 - %.2f\n", pibcapita1, pibcapita2);
-            printf("*** Carta 2 Venceu! ***\n");
-        } else {
-            printf("Cidade: %s e Cidade: %s\n", nome1, nome2);
-            printf("Atributo Comparado: %d\n", escolhaJogador);
-            printf("Carta 1 - %.2f | Carta 2 - %.2f\n", pibcapita1, pibcapita2);
-            printf("*** Houve um Empate! ***\n");
+          if (pibcapita1 > pibcapita2) { // Se o PIB per capita da carta 1 for maior que o PIB per capita da carta 2
+            printf("Cidade: %s\n", nome1); // Exibe o nome da cidade 1
+            printf("Atributo Comparado: %d\n", escolhaJogador); // Exibe o atributo comparado
+            printf("Carta 1 - %.2f | Carta 2 - %.2f\n", pibcapita1, pibcapita2); // Exibe o PIB per capita da carta 1 e da carta 2
+            printf("*** Carta 1 Venceu! ***\n"); // Exibe a mensagem de vitória da carta 1
+        } else if (pibcapita1 < pibcapita2) { // Se o PIB per capita da carta 1 for menor que o PIB per capita da carta 2
+            printf("Cidade: %s\n", nome2); // Exibe o nome da cidade 2
+            printf("Atributo Comparado: %d\n", escolhaJogador); // Exibe o atributo comparado
+            printf("Carta 1 - %.2f | Carta 2 - %.2f\n", pibcapita1, pibcapita2); // Exibe o PIB per capita da carta 1 e da carta 2
+            printf("*** Carta 2 Venceu! ***\n"); // Exibe a mensagem de vitória da carta 2
+        } else { // Se o PIB per capita da carta 1 for igual ao PIB per capita da carta 2
+            printf("Cidade: %s e Cidade: %s\n", nome1, nome2); // Exibe o nome da cidade 1 e da cidade 2
+            printf("Atributo Comparado: %d\n", escolhaJogador); // Exibe o atributo comparado
+            printf("Carta 1 - %.2f | Carta 2 - %.2f\n", pibcapita1, pibcapita2); // Exibe o PIB per capita da carta 1 e da carta 2
+            printf("*** Houve um Empate! ***\n"); // Exibe a mensagem de empate
         } break; // Sai do switch
 
         case 7: // Se o jogador escolher Super Poder
           printf("Você escolheu Super Poder.\n"); // Exibe a escolha do jogador
-          if (superpoder1 > superpoder2) {
-            printf("Cidade: %s\n", nome1);
-            printf("Atributo Comparado: %d\n", escolhaJogador);
-            printf("Carta 1 - %.2f | Carta 2 - %.2f\n", superpoder1, superpoder2);
-            printf("*** Carta 1 Venceu! ***\n");
-        } else if (superpoder1 < superpoder2) {
-            printf("Cidade: %s\n", nome2);
-            printf("Atributo Comparado: %d\n", escolhaJogador);
-            printf("Carta 1 - %.2f | Carta 2 - %.2f\n", superpoder1, superpoder2);
-            printf("*** Carta 2 Venceu! ***\n");
+          if (superpoder1 > superpoder2) { // Se o superpoder da carta 1 for maior que o superpoder da carta 2
+            printf("Cidade: %s\n", nome1); // Exibe o nome da cidade 1
+            printf("Atributo Comparado: %d\n", escolhaJogador); // Exibe o atributo comparado
+            printf("Carta 1 - %.2f | Carta 2 - %.2f\n", superpoder1, superpoder2); // Exibe o superpoder da carta 1 e da carta 2
+            printf("*** Carta 1 Venceu! ***\n"); // Exibe a mensagem de vitória da carta 1
+        } else if (superpoder1 < superpoder2) { // Se o superpoder da carta 1 for menor que o superpoder da carta 2
+            printf("Cidade: %s\n", nome2); // Exibe o nome da cidade 2
+            printf("Atributo Comparado: %d\n", escolhaJogador); // Exibe o atributo comparado
+            printf("Carta 1 - %.2f | Carta 2 - %.2f\n", superpoder1, superpoder2); // Exibe o superpoder da carta 1 e da carta 2
+            printf("*** Carta 2 Venceu! ***\n"); // Exibe a mensagem de vitória da carta 2
         } else {
-            printf("Cidade: %s e Cidade: %s\n", nome1, nome2);
-            printf("Atributo Comparado: %d\n", escolhaJogador);
-            printf("Carta 1 - %.2f | Carta 2 - %.2f\n", superpoder1, superpoder2);
-            printf("*** Houve um Empate! ***\n");
+            printf("Cidade: %s e Cidade: %s\n", nome1, nome2); // Exibe o nome da cidade 1 e da cidade 2
+            printf("Atributo Comparado: %d\n", escolhaJogador); // Exibe o atributo comparado
+            printf("Carta 1 - %.2f | Carta 2 - %.2f\n", superpoder1, superpoder2); // Exibe o superpoder da carta 1 e da carta 2
+            printf("*** Houve um Empate! ***\n"); // Exibe a mensagem de empate
         } break; // Sai do switch
 
         default: // Se o jogador escolher uma opção inválida
